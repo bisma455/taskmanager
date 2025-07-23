@@ -7,53 +7,78 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        body {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
-            font-family: "Poppins", sans-serif;
-        }
-        .navbar {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 0 0 1rem 1rem;
-        }
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 1.8rem;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 1rem;
-            backdrop-filter: blur(5px);
-            color: #fff;
-        }
-        .card-header {
-            background: transparent;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 600;
-        }
-        .btn-primary {
-            background: #8e2de2;
-            border: none;
-        }
-        .btn-primary:hover {
-            background: #4a00e0;
-        }
-        .status-badge {
-            font-size: 0.9rem;
-            padding: 0.3rem 0.6rem;
-            border-radius: 0.5rem;
-        }
-        .status-todo { background: #f39c12; }
-        .status-progress { background: #3498db; }
-        .status-done { background: #2ecc71; }
-        .modal-content {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(8px);
-            border-radius: 1rem;
-            color: #fff;
-        }
+      body {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #343a40;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-warning, .btn-danger {
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.badge.to-do {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge.in-progress {
+    background-color: #0d6efd;
+}
+
+.badge.done {
+    background-color: #28a745;
+}
+
+.animate-slide {
+    animation: slideIn 0.5s ease forwards;
+}
+
+.animate-fade {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
     </style>
 </head>
 <body>
